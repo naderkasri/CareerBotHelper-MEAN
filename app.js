@@ -13,7 +13,7 @@ var app = express();
 
 var cors = require('cors');
 
-var db = mongoose.connect('mongodb://localhost:27017/mean');
+var db = mongoose.connect('mongodb://admin:badran@ds157040.mlab.com:57040/passport');
 
 var Tag = require('./models/tag');
 
@@ -33,7 +33,7 @@ app.use(cors());
 app.use('/', index);
 app.use('/users', users);
 
-tagRouter = require('./Routes/tags')(Tag);
+tagRouter = require('./routes/tags')(Tag);
 
 
 app.use('/api/tags', tagRouter); 
