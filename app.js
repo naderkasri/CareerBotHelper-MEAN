@@ -13,9 +13,10 @@ var app = express();
 
 var cors = require('cors');
 
-var db = mongoose.connect('mongodb://admin:badran@ds157040.mlab.com:57040/passport');
+var db = mongoose.connect('mongodb://localhost:27017/mean');
 
 var Tag = require('./models/tag');
+var Quiz = require('./models/quiz');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,9 +35,11 @@ app.use('/', index);
 app.use('/users', users);
 
 tagRouter = require('./routes/tags')(Tag);
+quizRouter = require('./routes/quizzes')(Quiz);
 
 
 app.use('/api/tags', tagRouter); 
+app.use('/api/quizzes', quizRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
