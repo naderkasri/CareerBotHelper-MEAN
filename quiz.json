@@ -1,0 +1,30 @@
+{
+  "category": "Science",
+  "title": "Science Quiz 1",
+  "description": "A quiz to determine scientific interests about the user",
+  "selectedTimes":0,
+  "satisfactionRate":100,
+  "questions":[
+    { 
+      "content":"Are you interested in biology?",
+      "tags":["Biology","Science"]
+    },
+     { 
+      "content":"Are you interested in maths?",
+      "tags":["Maths","Science"]
+    },
+     { 
+      "content":"Are you interested in physics?",
+      "tags":["Physics","Science"]
+    },
+     { 
+      "content":"Are you interested in chesmitry?",
+      "tags":["Chesmitry","Science"]
+    },
+     { 
+      "content":"Are you interested in research?",
+      "tags":["Research","Science"]
+    }
+  ]
+  
+}
